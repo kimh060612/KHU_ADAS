@@ -68,6 +68,7 @@ Opencv에서는  다체널 행렬의 원소는 다음과 같이 저장된다.
        1 2 3 1 2 3 ]  
   4. 나머지는 엇비슷함. 그냥 구글링 하십셔 휴먼  
 <br>
+
 * Mat class의 Method    
   1. create(rows, columns, Data Type)    
   이는 rows, cols 크기의 Data Type의 행렬을 할당.  
