@@ -34,9 +34,8 @@ int main()
         imshow("Original", img);
         if (waitKey(30)==27)break;
     }
-    destroyWindow("Threshold");
-    destroyWindow("NoThreshold");
-    destroyWindow("Original");
+    
+    cv::destroyAllWindows();
     return 0;
 }
 

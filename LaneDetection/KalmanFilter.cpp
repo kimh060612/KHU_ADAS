@@ -7,6 +7,8 @@
 using namespace std;
 using namespace cv;
 
+
+
 int main()
 {
     VideoCapture Video("./TestMovie.mp4");
@@ -46,12 +48,12 @@ int main()
             line(frame, Point(lines[i][0], lines[i][1] + half_h), Point(lines[i][2], lines[i][3] + half_h), Scalar(0,0,255), 3, 2);
         }
 
+
         
         imshow("Original", frame);
         if (waitKey(30)==27)break;
     }
 
-    cv::destroyWindow("Original");
-    cv::destroyWindow("Cropped");
+    cv::destroyAllWindows();
     return 0;
 }

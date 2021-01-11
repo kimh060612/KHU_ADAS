@@ -31,8 +31,8 @@ int main()
         if (frame.empty())break;
         Mat gray_frame;
         gray_frame = frame( half & bound );
-        imshow("Cropped", gray_frame);
         cvtColor(gray_frame, gray_frame, CV_BGR2GRAY);
+        imshow("Cropped", gray_frame);
         Mat dst;
         Canny(gray_frame, dst, 60, 150);
         //cvtColor(dst, color_dst, CV_GRAY2BGR);
@@ -45,7 +45,6 @@ int main()
             // if ((angle > 10 && angle < 85) || ( angle > 92 && angle < 178)) 
             line(frame, Point(lines[i][0], lines[i][1] + half_h), Point(lines[i][2], lines[i][3] + half_h), Scalar(0,0,255), 3, 2);
         }
-
         // 원래는 Adaptive ROI를 적용하려고 했지만 생각을 곰곰히 해보니 이미 충분히 느리다. 
         // 우리는 주어진 환경이 있기에 굳이 이것이 필요하지는 않을 것 같다.
         imshow("Original", frame);
